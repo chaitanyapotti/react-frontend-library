@@ -5,3 +5,5 @@ Supported front-end default designs
 - Vault
 
 use MUIThemeProvider and pass a property
+
+use npm run release to release a new build to npm
