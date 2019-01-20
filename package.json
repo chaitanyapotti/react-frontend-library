@@ -1,6 +1,6 @@
 {
   "name": "react-frontend_library",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Custom front-end component library",
   "main": "index.js",
   "scripts": {

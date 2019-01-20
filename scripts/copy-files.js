@@ -11,7 +11,7 @@ async function copyFile(file) {
 }
 
 function typescriptCopy(from, to) {
-  const files = glob.sync("./*.d.ts", { cwd: from });
+  const files = glob.sync("**/*.d.ts", { cwd: from });
   const cmds = files.map(file => fse.copy(path.resolve(from, file), path.resolve(to, file)));
   return Promise.all(cmds);
 }
