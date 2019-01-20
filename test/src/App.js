@@ -17,7 +17,9 @@ class App extends Component {
           </a>
         </header>
         <body>
-          <CuiButton themeEngine="semantic">Hello Click</CuiButton>
+          <CuiButton variant="flat" themeEngine="semantic">
+            Hello Click
+          </CuiButton>
         </body>
       </div>
     );
