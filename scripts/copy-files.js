@@ -5,7 +5,7 @@ import fse from "fs-extra";
 import glob from "glob";
 
 async function copyFile(file) {
-  const buildPath = path.resolve(__dirname, "./build/", path.basename(file));
+  const buildPath = path.resolve(__dirname, "../build/", path.basename(file));
   await fse.copy(file, buildPath);
   console.log(`Copied ${file} to ${buildPath}`);
 }
@@ -17,7 +17,7 @@ function typescriptCopy(from, to) {
 }
 
 async function createPackageFile() {
-  const packageData = await fse.readFile(path.resolve(__dirname, "./package.json"), "utf8");
+  const packageData = await fse.readFile(path.resolve(__dirname, "../package.json"), "utf8");
   const { nyc, scripts, devDependencies, workspaces, ...packageDataOther } = JSON.parse(packageData);
   const newPackageData = {
     ...packageDataOther,
@@ -25,7 +25,7 @@ async function createPackageFile() {
     module: "./index.es.js",
     private: false
   };
-  const buildPath = path.resolve(__dirname, "./build/package.json");
+  const buildPath = path.resolve(__dirname, "../build/package.json");
 
   await fse.writeFile(buildPath, JSON.stringify(newPackageData, null, 2), "utf8");
   console.log(`Created package.json in ${buildPath}`);
@@ -45,11 +45,7 @@ async function addLicense(packageData) {
  * LICENSE file in the root directory of this source tree.
  */
 `;
-  await Promise.all(
-    ["./build/index.js", "./build/index.es.js", "./build/umd/material-ui.development.js", "./build/umd/material-ui.production.min.js"].map(file =>
-      prepend(path.resolve(__dirname, file), license)
-    )
-  );
+  await Promise.all(["../build/index.js", "../build/index.es.js"].map(file => prepend(path.resolve(__dirname, file), license)));
 }
 
 async function run() {
@@ -59,7 +55,7 @@ async function run() {
 
   // TypeScript
   const from = path.resolve(__dirname, "./src");
-  await Promise.all([typescriptCopy(from, path.resolve(__dirname, "./build")), typescriptCopy(from, path.resolve(__dirname, "./build/es"))]);
+  await Promise.all([typescriptCopy(from, path.resolve(__dirname, "../build")), typescriptCopy(from, path.resolve(__dirname, "../build/es"))]);
 }
 
 run();
