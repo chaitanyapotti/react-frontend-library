@@ -1,6 +1,6 @@
 {
   "name": "react-frontend_library",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Custom front-end component library",
   "main": "index.js",
   "scripts": {
@@ -50,8 +50,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "prettier": "^1.16.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.0.4",
     "babel-plugin-istanbul": "^5.1.0",
     "babel-plugin-module-resolver": "^3.1.2",
     "babel-plugin-preval": "^3.0.1",
@@ -77,7 +76,7 @@
     "vault"
   ],
   "author": "Chaitanya Potti, Ayush Gupta",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chaitanyapotti/react-frontend_library/issues"
   },

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { CuiButton } from "react-frontend_library/src/components";
+import { CuiButton } from "react-frontend_library";
 
 class App extends Component {
   render() {
