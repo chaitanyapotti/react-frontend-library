@@ -8228,10 +8228,10 @@ react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
-react-frontend_library@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/react-frontend_library/-/react-frontend_library-1.0.12.tgz#258347c6fad46d4042d0dc6219de1ece05c7a163"
-  integrity sha512-8CDDd7nay8XlHknvEUtai9ioWfL0tml+Idcap3BIFSmyuB3DTEwiC6nJhq4nVY+0O4JDifPDdPmgNxvnj4qLbA==
+react-frontend_library@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/react-frontend_library/-/react-frontend_library-1.0.13.tgz#92af0a2b7aaf64658cc890af585243206d883bb0"
+  integrity sha512-4t/LIc87lK0ltBhS1JO2gNp7o2qGuieyBdAfiqiH66+NJfhBy5OIZ+71I3+2eIzVOG9NJI5RZ3Q04jwn+JMRgg==
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@material-ui/core" "^3.9.0"
