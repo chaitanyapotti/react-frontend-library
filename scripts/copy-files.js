@@ -54,7 +54,7 @@ async function run() {
   await addLicense(packageData);
 
   // TypeScript
-  const from = path.resolve(__dirname, "./src");
+  const from = path.resolve(__dirname, "../src");
   await Promise.all([typescriptCopy(from, path.resolve(__dirname, "../build")), typescriptCopy(from, path.resolve(__dirname, "../build/es"))]);
 }
 
