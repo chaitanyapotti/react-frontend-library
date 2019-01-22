@@ -1,0 +1,39 @@
+{
+  "name": "react-frontend-library",
+  "version": "1.0.0",
+  "description": "Custom front-end component library",
+  "main": "./index.js",
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "@material-ui/core": "^3.9.0",
+    "@material-ui/utils": "^3.0.0-alpha.3",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2"
+  },
+  "module": "./index.es.js",
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitanyapotti/react-frontend_library.git"
+  },
+  "keywords": [
+    "material-ui",
+    "react",
+    "semantic-ui",
+    "vault"
+  ],
+  "author": "Chaitanya Potti, Ayush Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaitanyapotti/react-frontend_library/issues"
+  },
+  "homepage": "https://github.com/chaitanyapotti/react-frontend_library#readme",
+  "private": false
+}
