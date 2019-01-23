@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.customStyles = void 0;
+exports.default = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -21,32 +21,24 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _core = require("@material-ui/core");
 
-// https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js
-var customStyles = {
-  material: {
-    color: "#6d6d6d"
-  },
-  semantic: {
-    color: "#4dac3f"
-  },
-  vault: {
-    color: "#3d3d3d"
-  }
-};
-exports.customStyles = customStyles;
+var _buttonStyle = _interopRequireDefault(require("../helpers/buttonStyle"));
 
+// https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js
 var CuiButton = function CuiButton(props) {
   var _classNames;
 
   var children = props.children,
       classes = props.classes,
+      muiClasses = props.muiClasses,
       classNameProp = props.className,
       themeEngine = props.themeEngine,
-      other = (0, _objectWithoutProperties2.default)(props, ["children", "classes", "className", "themeEngine"]);
+      other = (0, _objectWithoutProperties2.default)(props, ["children", "classes", "muiClasses", "className", "themeEngine"]);
   var className = (0, _classnames.default)((_classNames = {}, (0, _defineProperty2.default)(_classNames, classes.semantic, themeEngine === "semantic"), (0, _defineProperty2.default)(_classNames, classes.vault, themeEngine === "vault"), (0, _defineProperty2.default)(_classNames, classes.material, themeEngine === "material"), _classNames), classNameProp);
   return _react.default.createElement(_core.Button, (0, _extends2.default)({
     className: className
-  }, other), children);
+  }, other, {
+    classes: muiClasses
+  }), children);
 };
 
 CuiButton.propTypes = {
@@ -70,12 +62,13 @@ CuiButton.propTypes = {
    * The theme engine of the component. It supports those theme engines that make sense for this component.
    * Default theme is material
    */
-  themeEngine: _propTypes.default.oneOf(["material", "semantic", "vault"])
+  themeEngine: _propTypes.default.oneOf(["material", "semantic", "vault"]),
+  muiClasses: _propTypes.default.object
 };
 CuiButton.defaultProps = {
   themeEngine: "material"
 };
 
-var _default = (0, _core.withStyles)(customStyles)(CuiButton);
+var _default = (0, _core.withStyles)(_buttonStyle.default)(CuiButton);
 
 exports.default = _default;

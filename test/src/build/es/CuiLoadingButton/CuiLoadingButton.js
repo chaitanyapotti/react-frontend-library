@@ -14,14 +14,12 @@ export const customStyles = {
   },
   vault: {
     color: "#3d3d3d"
-  }
-};
-const styles = {
+  },
   root: {
     marginLeft: "20px"
   }
 };
-const SpinnerAdornment = withStyles(styles)(props => React.createElement(CircularProgress, {
+const SpinnerAdornment = withStyles(customStyles)(props => React.createElement(CircularProgress, {
   className: props.classes.root,
   size: 20,
   color: "primary"
@@ -30,7 +28,7 @@ const SpinnerAdornment = withStyles(styles)(props => React.createElement(Circula
 const CuiLoadingButton = props => {
   const {
     children,
-    loading = true,
+    loading,
     classes,
     className: classNameProp,
     themeEngine
@@ -71,6 +69,7 @@ CuiLoadingButton.propTypes = {
   themeEngine: PropTypes.oneOf(["material", "semantic", "vault"])
 };
 CuiLoadingButton.defaultProps = {
-  themeEngine: "material"
+  themeEngine: "material",
+  loading: true
 };
 export default withStyles(customStyles)(CuiLoadingButton);

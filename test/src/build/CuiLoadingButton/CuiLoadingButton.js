@@ -31,15 +31,13 @@ var customStyles = {
   },
   vault: {
     color: "#3d3d3d"
-  }
-};
-exports.customStyles = customStyles;
-var styles = {
+  },
   root: {
     marginLeft: "20px"
   }
 };
-var SpinnerAdornment = (0, _core.withStyles)(styles)(function (props) {
+exports.customStyles = customStyles;
+var SpinnerAdornment = (0, _core.withStyles)(customStyles)(function (props) {
   return _react.default.createElement(_core.CircularProgress, {
     className: props.classes.root,
     size: 20,
@@ -51,8 +49,7 @@ var CuiLoadingButton = function CuiLoadingButton(props) {
   var _classNames;
 
   var children = props.children,
-      _props$loading = props.loading,
-      loading = _props$loading === void 0 ? true : _props$loading,
+      loading = props.loading,
       classes = props.classes,
       classNameProp = props.className,
       themeEngine = props.themeEngine,
@@ -87,7 +84,8 @@ CuiLoadingButton.propTypes = {
   themeEngine: _propTypes.default.oneOf(["material", "semantic", "vault"])
 };
 CuiLoadingButton.defaultProps = {
-  themeEngine: "material"
+  themeEngine: "material",
+  loading: true
 };
 
 var _default = (0, _core.withStyles)(customStyles)(CuiLoadingButton);

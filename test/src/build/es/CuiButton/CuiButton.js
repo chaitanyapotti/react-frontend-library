@@ -5,26 +5,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withStyles, Button } from "@material-ui/core";
-export const customStyles = {
-  material: {
-    color: "#6d6d6d"
-  },
-  semantic: {
-    color: "#4dac3f"
-  },
-  vault: {
-    color: "#3d3d3d"
-  }
-};
+import buttonStyle from "../helpers/buttonStyle";
 
 const CuiButton = props => {
   const {
     children,
     classes,
+    muiClasses,
     className: classNameProp,
     themeEngine
   } = props,
-        other = _objectWithoutPropertiesLoose(props, ["children", "classes", "className", "themeEngine"]);
+        other = _objectWithoutPropertiesLoose(props, ["children", "classes", "muiClasses", "className", "themeEngine"]);
 
   const className = classNames({
     [classes.semantic]: themeEngine === "semantic",
@@ -33,7 +24,9 @@ const CuiButton = props => {
   }, classNameProp);
   return React.createElement(Button, _extends({
     className: className
-  }, other), children);
+  }, other, {
+    classes: muiClasses
+  }), children);
 };
 
 CuiButton.propTypes = {
@@ -57,9 +50,10 @@ CuiButton.propTypes = {
    * The theme engine of the component. It supports those theme engines that make sense for this component.
    * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"])
+  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"]),
+  muiClasses: PropTypes.object
 };
 CuiButton.defaultProps = {
   themeEngine: "material"
 };
-export default withStyles(customStyles)(CuiButton);
+export default withStyles(buttonStyle)(CuiButton);
