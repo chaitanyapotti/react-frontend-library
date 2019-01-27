@@ -12,7 +12,7 @@ const CuiButton = props => {
   const { children, classes, muiClasses, className: classNameProp, themeEngine, ...other } = props;
   customStyle = styles[themeEngine];
   console.log("sasass", customStyle);
-  const className = classNames(classNameProp, classes.button);
+  const className = classNames(classNameProp, customStyle.button);
   return (
     <Button className={className} {...other} classes={muiClasses}>
       {children}
