@@ -10,9 +10,8 @@ const CuiButton = props => {
   const { children, classes, muiClasses, className: classNameProp, themeEngine, ...other } = props;
   const customStyle = classes;
   console.log("sasass", customStyle);
-  const className = classNames(classNameProp, {
-    [customStyle.semanticbutton]: themeEngine === "semantic",
-    [customStyle.vaultbutton]: themeEngine === "vault"
+  const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
+    [classes.label]: themeEngine === "vault"
   });
   console.log("sasass", customStyle.semanticbutton);
   return (
