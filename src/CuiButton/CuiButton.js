@@ -3,7 +3,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { withStyles, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import styles from "../styles/Button";
 
 let customStyle = "";
@@ -46,4 +46,4 @@ CuiButton.defaultProps = {
   themeEngine: "material"
 };
 // console.log("slsasa", styles.themeEngine, styles);
-export default withStyles(customStyle)(CuiButton);
+export default CuiButton;

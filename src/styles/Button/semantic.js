@@ -1,4 +1,5 @@
 import { grayColor, primaryColor, infoColor, successColor, warningColor, dangerColor, roseColor } from "../common";
+import { withStyles } from "@material-ui/core";
 
 const semantic = {
   button: {
@@ -10,4 +11,4 @@ const semantic = {
   }
 };
 
-export default semantic;
+export default withStyles(semantic);

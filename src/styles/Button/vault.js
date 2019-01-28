@@ -1,4 +1,5 @@
 import { grayColor, primaryColor, infoColor, successColor, warningColor, dangerColor, roseColor } from "../common";
+import { withStyles } from "@material-ui/core";
 
 const vault = {
   button: {
@@ -13,4 +14,4 @@ const vault = {
   }
 };
 
-export default vault;
+export default withStyles(vault);
