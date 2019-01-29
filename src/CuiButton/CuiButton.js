@@ -3,17 +3,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Button, withStyles } from "@material-ui/core";
+import { withStyles, Button } from "@material-ui/core";
 import styles from "../styles/Button";
 
 const CuiButton = props => {
   const { children, classes, muiClasses, className: classNameProp, themeEngine, ...other } = props;
-  const customStyle = classes;
-  console.log("sasass", customStyle);
-  const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
-    [classes.label]: themeEngine === "vault"
-  });
-  console.log("sasass", customStyle.semanticbutton);
+  const className = classNames(classNameProp, classes.button);
   return (
     <Button className={className} {...other} classes={muiClasses}>
       {children}
@@ -46,5 +41,4 @@ CuiButton.propTypes = {
 CuiButton.defaultProps = {
   themeEngine: "material"
 };
-// console.log("slsasa", styles.themeEngine, styles);
 export default withStyles(styles)(CuiButton);
