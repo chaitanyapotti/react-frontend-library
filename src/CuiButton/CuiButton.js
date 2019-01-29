@@ -7,13 +7,30 @@ import { Button, withStyles } from "@material-ui/core";
 import styles from "../styles/Button";
 
 const CuiButton = props => {
-  const { children, classes, muiClasses, className: classNameProp, themeEngine, ...other } = props;
+  const { color, round, children, disabled, simple, size, block, link, justIcon, classes, className: classNameProp, themeEngine, ...other } = props;
+
   const customStyle = classes;
-  console.log("sasass", customStyle);
   const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
-    [classes.label]: themeEngine === "vault"
+    [classes.label]: themeEngine === "vault",
+    [classes[size]]: size,
+    [classes[color]]: color,
+    [classes.round]: round,
+    [classes.disabled]: disabled,
+    [classes.simple]: simple,
+    [classes.block]: block,
+    [classes.link]: link,
+    [classes.justIcon]: justIcon,
+    [className]: className
   });
-  console.log("sasass", customStyle.semanticbutton);
+  const muiClasses = {
+    root: classes.root,
+    label: classes.label,
+    fullWidth: classes.fullWidth,
+    variant: classes.variant,
+    href: classes.href,
+    disableRipple: classes.disableRipple,
+    disableFocusRipple: classes.disableFocusRipple
+  };
   return (
     <Button className={className} {...other} classes={muiClasses}>
       {children}
@@ -39,12 +56,12 @@ CuiButton.propTypes = {
    * The theme engine of the component. It supports those theme engines that make sense for this component.
    * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"]),
-  muiClasses: PropTypes.object
+  themeEngine: PropTypes.oneOf(["material", "semantic", "vault", "tim"]),
+  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+  size: PropTypes.oneOf(["sm", "lg"])
 };
 
 CuiButton.defaultProps = {
   themeEngine: "material"
 };
-// console.log("slsasa", styles.themeEngine, styles);
 export default withStyles(styles)(CuiButton);

@@ -2,14 +2,18 @@ import { grayColor, primaryColor, infoColor, successColor, warningColor, dangerC
 
 const vault = {
   vaultbutton: {
-    color: "#2d2d2d",
-    borderRadius: "50px",
+    color: "#fff",
+    fontWeight: "bold",
     height: "45px",
     border: "none",
-    backgroundColor: infoColor
-  },
-  label: {
-    fontSize: "35px"
+    padding: "6px 16px",
+    "&:hover,&:focus": {
+      boxShadow: "0 10px 20px 0 rgba(74,169,252,.5)",
+      textDecoration: "none",
+      cursor: "pointer",
+      transform: "translateY(-5px)",
+      transition: ".25s ease-in-out"
+    }
   }
 };
 

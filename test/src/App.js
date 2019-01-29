@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import { CuiButton, CuiLoadingButton } from "react-frontend-library";
+import { CuiButton } from "./build";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <CuiButton variant="text" themeEngine="vault">
+        <CuiButton themeEngine="vault" color="warning" round link>
           Hello
         </CuiButton>
       </div>
