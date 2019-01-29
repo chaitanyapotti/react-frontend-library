@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CuiButton variant="text" themeEngine="semantic">
+        <CuiButton themeEngine="vault" color="warning" round link>
           Hello
         </CuiButton>
       </div>
