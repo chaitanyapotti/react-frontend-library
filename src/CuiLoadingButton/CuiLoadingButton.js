@@ -4,34 +4,39 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withStyles, Button, CircularProgress } from "@material-ui/core";
+import styles from "../styles/LoadingButton";
 
-export const customStyles = {
-  material: {
-    color: "#6d6d6d"
-  },
-  semantic: {
-    color: "#4dac3f"
-  },
-  vault: {
-    color: "#3d3d3d"
-  },
-  root: {
-    marginLeft: "20px"
-  }
-};
-
-const SpinnerAdornment = withStyles(customStyles)(props => <CircularProgress className={props.classes.root} size={20} color="primary" />);
+const SpinnerAdornment = withStyles(styles)(props => <CircularProgress className={props.classes.spinner} size={20} />);
 
 const CuiLoadingButton = props => {
-  const { children, loading, classes, className: classNameProp, themeEngine, ...other } = props;
-  const className = classNames(
-    {
-      [classes.semantic]: themeEngine === "semantic",
-      [classes.vault]: themeEngine === "vault",
-      [classes.material]: themeEngine === "material"
-    },
-    classNameProp
-  );
+  const {
+    children,
+    loading,
+    disabled,
+    simple,
+    size,
+    block,
+    link,
+    justIcon,
+    color,
+    round,
+    classes,
+    className: classNameProp,
+    themeEngine,
+    ...other
+  } = props;
+  const customStyle = classes;
+  const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
+    [classes[size]]: size,
+    [classes[color]]: color,
+    [classes.round]: round,
+    [classes.disabled]: disabled,
+    [classes.simple]: simple,
+    [classes.block]: block,
+    [classes.link]: link,
+    [classes.justIcon]: justIcon,
+    [className]: className
+  });
   return (
     <Button className={className} {...other}>
       {children}
@@ -66,4 +71,4 @@ CuiLoadingButton.defaultProps = {
   loading: true
 };
 
-export default withStyles(customStyles)(CuiLoadingButton);
+export default withStyles(styles)(CuiLoadingButton);

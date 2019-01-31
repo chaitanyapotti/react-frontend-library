@@ -1,12 +1,12 @@
 import * as React from "react";
 import { StandardProps, PropTypes } from "..";
-import { ButtonProps } from "@material-ui/core/Button/index";
+import { TableProps } from "@material-ui/core/Table/index";
 
-export interface CuiTablesProps extends StandardProps<ButtonProps, CuiTablesClassKey, "component"> {
-  themeEngine?: "material" | "semantic" | "vault";
+export interface CuiTablesProps extends StandardProps<TableProps, CuiTablesClassKey, "component"> {
+  themeEngine?: "material" | "semantic" | "vault" | "tim";
 }
 
-export type CuiTablesClassKey = "material" | "semantic" | "vault";
+export type CuiTablesClassKey = "material" | "semantic" | "vault" | "tim";
 
 declare const CuiTables: React.ComponentType<CuiTablesProps>;
 

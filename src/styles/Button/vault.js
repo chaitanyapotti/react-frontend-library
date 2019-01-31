@@ -1,4 +1,4 @@
-import { grayColor, primaryColor, infoColor, successColor, warningColor, dangerColor, roseColor } from "../common";
+import { grayColor, primaryColor, infoColor, successColor, warningColor, dangerColor, roseColor, vaultColor } from "../common";
 
 const vault = {
   vaultbutton: {
@@ -12,7 +12,8 @@ const vault = {
       textDecoration: "none",
       cursor: "pointer",
       transform: "translateY(-5px)",
-      transition: ".25s ease-in-out"
+      transition: ".25s ease-in-out",
+      backgroundColor: vaultColor
     }
   }
 };

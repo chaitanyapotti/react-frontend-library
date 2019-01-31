@@ -1,4 +1,4 @@
-import { grayColor, primaryColor, infoColor, successColor, warningColor, dangerColor, roseColor } from "../common";
+import { grayColor, vaultColor, primaryColor, infoColor, successColor, warningColor, dangerColor, roseColor } from "../common";
 
 const common = {
   white: {
@@ -6,6 +6,10 @@ const common = {
       backgroundColor: "#FFFFFF",
       color: grayColor
     }
+  },
+  vault: {
+    backgroundColor: vaultColor,
+    border: "none"
   },
   rose: {
     backgroundColor: roseColor,

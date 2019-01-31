@@ -15,9 +15,12 @@
   "dependencies": {
     "@babel/runtime": "^7.2.0",
     "@material-ui/core": "^3.9.0",
+    "@material-ui/icons": "^3.0.2",
     "@material-ui/utils": "^3.0.0-alpha.3",
     "classnames": "^2.2.6",
-    "prop-types": "^15.6.2"
+    "mui-datatables": "^2.0.0-beta-53",
+    "prop-types": "^15.6.2",
+    "react-dom": "^16.7.0"
   },
   "module": "./index.es.js",
   "peerDependencies": {

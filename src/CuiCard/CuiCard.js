@@ -3,32 +3,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { withStyles, Button } from "@material-ui/core";
-import styles from "../styles/Button";
+import { withStyles, Card } from "@material-ui/core";
+import styles from "../styles/Card";
 
-const CuiButton = props => {
-  const { color, round, children, disabled, simple, size, block, link, justIcon, classes, className: classNameProp, themeEngine, ...other } = props;
+const CuiCard = props => {
+  const { children, classes, plain, profile, chart, className: classNameProp, themeEngine, ...other } = props;
 
   const customStyle = classes;
-  const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
-    [classes[size]]: size,
-    [classes[color]]: color,
-    [classes.round]: round,
-    [classes.disabled]: disabled,
-    [classes.simple]: simple,
-    [classes.block]: block,
-    [classes.link]: link,
-    [classes.justIcon]: justIcon,
-    [className]: className
+  const className = classNames(classNameProp, [customStyle[`${themeEngine}Card`]], {
+    [classes.cardPlain]: plain,
+    [classes.cardProfile]: profile,
+    [classes.cardChart]: chart
   });
   return (
-    <Button className={className} {...other}>
+    <Card className={className} {...other}>
       {children}
-    </Button>
+    </Card>
   );
 };
 
-CuiButton.propTypes = {
+CuiCard.propTypes = {
   /**
    * The content of the button.
    */
@@ -51,7 +45,7 @@ CuiButton.propTypes = {
   size: PropTypes.oneOf(["sm", "lg"])
 };
 
-CuiButton.defaultProps = {
+CuiCard.defaultProps = {
   themeEngine: "material"
 };
-export default withStyles(styles)(CuiButton);
+export default withStyles(styles)(CuiCard);
