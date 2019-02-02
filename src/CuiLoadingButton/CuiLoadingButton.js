@@ -63,7 +63,9 @@ CuiLoadingButton.propTypes = {
    * The theme engine of the component. It supports those theme engines that make sense for this component.
    * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"])
+  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"]),
+  color: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+  size: PropTypes.oneOf(["sm", "lg"])
 };
 
 CuiLoadingButton.defaultProps = {

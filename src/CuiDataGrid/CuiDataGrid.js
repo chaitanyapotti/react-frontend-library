@@ -117,4 +117,11 @@ class DataGrid extends React.Component {
   }
 }
 
+// DataGrid.propTypes = {
+//   tableData: PropTypes.array,
+//   columns: PropTypes.array,
+//   onRowClick: PropTypes.function,
+//   filter: PropTypes.bool
+// };
+
 export default DataGrid;

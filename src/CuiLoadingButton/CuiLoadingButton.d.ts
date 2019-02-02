@@ -4,6 +4,8 @@ import { ButtonProps } from "@material-ui/core/Button/index";
 
 export interface CuiLoadingButtonProps extends StandardProps<ButtonProps, CuiLoadingButtonClassKey, "component"> {
   themeEngine?: "material" | "semantic" | "vault";
+  color?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
+  size?: "sm" | "lg";
 }
 
 export type CuiLoadingButtonClassKey = "material" | "semantic" | "vault";

@@ -47,7 +47,14 @@ CuiButton.propTypes = {
    * Default theme is material
    */
   themeEngine: PropTypes.oneOf(["material", "semantic", "vault", "tim"]),
+  /**
+   * The color property gives you to flexibilty to add specific color to the component.
+   * Based on prop type we are inserting the color
+   */
   color: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+  /**
+   * Size property gives flexibilty to add two different sizes.
+   */
   size: PropTypes.oneOf(["sm", "lg"])
 };
 

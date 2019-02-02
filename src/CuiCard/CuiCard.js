@@ -40,9 +40,7 @@ CuiCard.propTypes = {
    * The theme engine of the component. It supports those theme engines that make sense for this component.
    * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault", "tim"]),
-  color: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
-  size: PropTypes.oneOf(["sm", "lg"])
+  themeEngine: PropTypes.oneOf(["material", "semantic", "vault", "tim"])
 };
 
 CuiCard.defaultProps = {
