@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { CuiLoadingButton, CuiCard, CuiTables, CuiDataGrid } from "react-frontend-library";
+import { CuiLoadingButton, CuiCard, CuiTables, CuiDataGrid, CuiButton } from "react-frontend-library";
 
 class App extends Component {
   render() {
@@ -32,6 +32,9 @@ class App extends Component {
             ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
           ]}
         />
+        <CuiButton themeEngine="vault" themeColor="danger" simple>
+          Hello
+        </CuiButton>
       </CuiCard>
     );
   }

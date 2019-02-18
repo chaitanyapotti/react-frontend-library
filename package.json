@@ -19,12 +19,14 @@
     "@material-ui/utils": "^3.0.0-alpha.3",
     "classnames": "^2.2.6",
     "mui-datatables": "^2.0.0-beta-54",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "module": "./index.es.js",
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "sideEffects": false,
   "devDependencies": {
