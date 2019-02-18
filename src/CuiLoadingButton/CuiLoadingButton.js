@@ -25,8 +25,7 @@ const CuiLoadingButton = props => {
     themeEngine,
     ...other
   } = props;
-  const customStyle = classes;
-  const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
+  const className = classNames(classNameProp, [classes[`${themeEngine}button`]], {
     [classes[size]]: size,
     [classes[color]]: color,
     [classes.round]: round,

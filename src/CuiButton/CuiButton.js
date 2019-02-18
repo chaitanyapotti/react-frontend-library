@@ -7,16 +7,12 @@ import { withStyles, Button } from "@material-ui/core";
 import styles from "../styles/Button";
 
 const CuiButton = props => {
-  const { color, round, children, disabled, simple, size, block, link, justIcon, classes, className: classNameProp, themeEngine, ...other } = props;
+  const { themeColor, round, children, disabled, simple, link, justIcon, classes, className: classNameProp, themeEngine, ...other } = props;
 
-  const customStyle = classes;
-  const className = classNames(classNameProp, [customStyle[`${themeEngine}button`]], {
-    [classes[size]]: size,
-    [classes[color]]: color,
+  const className = classNames(classNameProp, [classes[`${themeEngine}button`], classes[themeColor]], {
     [classes.round]: round,
     [classes.disabled]: disabled,
     [classes.simple]: simple,
-    [classes.block]: block,
     [classes.link]: link,
     [classes.justIcon]: justIcon,
     [className]: className
@@ -46,19 +42,26 @@ CuiButton.propTypes = {
    * The theme engine of the component. It supports those theme engines that make sense for this component.
    * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault", "tim"]),
+  themeEngine: PropTypes.oneOf(["semantic", "vault", "tim"]),
   /**
    * The color property gives you to flexibilty to add specific color to the component.
    * Based on prop type we are inserting the color
    */
-  color: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
-  /**
-   * Size property gives flexibilty to add two different sizes.
-   */
-  size: PropTypes.oneOf(["sm", "lg"])
+  themeColor: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+
+  round: PropTypes.bool,
+
+  disabled: PropTypes.bool,
+
+  simple: PropTypes.bool,
+
+  link: PropTypes.bool,
+
+  justIcon: PropTypes.bool
 };
 
 CuiButton.defaultProps = {
-  themeEngine: "material"
+  themeEngine: "tim"
 };
+
 export default withStyles(styles)(CuiButton);

@@ -8,9 +8,7 @@ import styles from "../styles/Card";
 
 const CuiCard = props => {
   const { children, classes, plain, profile, chart, className: classNameProp, themeEngine, ...other } = props;
-
-  const customStyle = classes;
-  const className = classNames(classNameProp, [customStyle[`${themeEngine}Card`]], {
+  const className = classNames(classNameProp, [classes[`${themeEngine}Card`]], {
     [classes.cardPlain]: plain,
     [classes.cardProfile]: profile,
     [classes.cardChart]: chart
@@ -46,4 +44,5 @@ CuiCard.propTypes = {
 CuiCard.defaultProps = {
   themeEngine: "material"
 };
+
 export default withStyles(styles)(CuiCard);
