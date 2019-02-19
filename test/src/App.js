@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./App.css";
 import { CuiLoadingButton, CuiCard, CuiTables, CuiDataGrid, CuiButton } from "react-frontend-library";
+import "./App.css";
 
 class App extends Component {
   render() {
