@@ -9,13 +9,14 @@ import styles from "../styles/Button";
 const CuiButton = props => {
   const { themeColor, round, children, disabled, simple, link, justIcon, classes, className: classNameProp, themeEngine, ...other } = props;
 
-  const className = classNames(classNameProp, [classes[`${themeEngine}button`], classes[themeColor]], {
+  const className = classNames(classNameProp, {
+    [classes[themeColor]]: themeColor,
     [classes.round]: round,
     [classes.disabled]: disabled,
     [classes.simple]: simple,
     [classes.link]: link,
     [classes.justIcon]: justIcon,
-    [className]: className
+    [classes[`${themeEngine}button`]]: themeEngine
   });
   return (
     <Button className={className} {...other}>

@@ -91,6 +91,9 @@ class DataGrid extends React.Component {
             }
           }
         }
+      },
+      typography: {
+        useNextVariants: true
       }
     });
 
