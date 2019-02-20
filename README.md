@@ -36,6 +36,11 @@ Steppers
 ProgressBar
 Selection Control - Radio & Checkbox
 
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+
 | Components | Status | Use (Example) |
 | CuiBadge | Migrated | |
 | CuiButton | Done | |
