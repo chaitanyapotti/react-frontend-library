@@ -36,42 +36,37 @@ Steppers
 ProgressBar
 Selection Control - Radio & Checkbox
 
-| First Header | Second Header |
-| ------------ | ------------- |
-| Content Cell | Content Cell  |
-| Content Cell | Content Cell  |
-
-| Components | Status | Use (Example) |
-| CuiBadge | Migrated | |
-| CuiButton | Done | |
-| CuiCard | Migrated | |
-| CuiCol | Migrated but not working | |
-| CuiDataGrid | Done | |
-| CuiDropdown | Migrated | |
-| CuiGrid | Migrated | |
-| CuiLoadingButton | Migrated | |
-| CuiMasonaryLayout | Migrated | |
-| CuiMaterialBadge | Migrated | |
-| CuiPagination | Migrated | |
-| CuiParallax | Migrated | |
-| CuiRow | Migrated | |
-| CuiSnackbar | Migrated | |
-| CuiTables | Migrated | |
-| CuiTransactionButton | Migrated | |
-| CuiUploadButton | Pending | |
-| CuiTooltip | Pending | |
-| CuiModal | Pending ||
-| CuiTabs | Pending | |
-| CuiInput | Pending | |
-| CuiHeader | Pending ||
-| CuiSteppers | Pending ||
-| CuiProgressBar | Pending | |
-| CuiSelectionButton | Pending | |
-| CuiPickers | Pending ||
-| CuiSelect | Pending ||
-| CuiExpansionPanels | Pending | |
-| CuiDrawer | Pending ||
-| CuiDivider | Pending ||
-| CuiChips | Pending ||
-| CuiAutocomplete | Pending | |
-| CuiAvatar | Pending ||
+| Components           | Status   | Use (Examples) |
+| -------------------- | -------- | -------------- |
+| CuiBadge             | Migrated |                |
+| CuiButton            | Done     |                |
+| CuiCard              | Migrated |                |
+| CuiCol               | Migrated |                |
+| CuiDataGrid          | Done     |                |
+| CuiDropdown          | Migrated |                |
+| CuiGrid              | Migrated |                |
+| CuiLoadingButton     | Migrated |                |
+| CuiMasonaryLayout    | Migrated |                |
+| CuiMaterialBadge     | Migrated |                |
+| CuiPagination        | Migrated |                |
+| CuiParallax          | Migrated |                |
+| CuiRow               | Migrated |                |
+| CuiSnackbar          | Migrated |                |
+| CuiTables            | Migrated |                |
+| CuiTransactionButton | Migrated |                |
+| CuiUploadButton      | Pending  |                |
+| CuiTooltip           | Pending  |                |
+| CuiModal             | Pending  |                |
+| CuiTabs              | Pending  |                |
+| CuiInput             | Pending  |                |
+| CuiHeader            | Pending  |                |
+| CuiSteppers          | Pending  |                |
+| CuiProgressBar       | Pending  |                |
+| CuiSelectionButton   | Pending  |                |
+| CuiPickers           | Pending  |                |
+| CuiSelect            | Pending  |                |
+| CuiExpansionPanels   | Pending  |                |
+| CuiDrawer            | Pending  |                |
+| CuiDivider           | Pending  |                |
+| CuiChips             | Pending  |                |
+| CuiAvatar            | Pending  |                |
