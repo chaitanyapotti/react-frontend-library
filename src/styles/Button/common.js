@@ -128,6 +128,9 @@ const common = {
       color: "#999999",
       boxShadow: "none"
     }
+  },
+  transaction: {
+    backgroundColor: "yellow !important"
   }
 };
 

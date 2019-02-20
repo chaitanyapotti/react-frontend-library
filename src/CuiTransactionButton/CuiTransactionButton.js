@@ -8,9 +8,10 @@ import styles from "../styles/LoadingButton";
 
 const SpinnerAdornment = withStyles(styles)(props => <CircularProgress className={props.classes.spinner} size={20} />);
 
-const CuiLoadingButton = props => {
+const CuiTransactionButton = props => {
   const {
     children,
+    transaction,
     loading,
     disabled,
     simple,
@@ -26,6 +27,7 @@ const CuiLoadingButton = props => {
   } = props;
   const className = cx(classNameProp, {
     [classes.round]: round,
+    [classes.transaction]: transaction,
     [classes.disabled]: disabled,
     [classes.simple]: simple,
     [classes.block]: block,
@@ -34,16 +36,15 @@ const CuiLoadingButton = props => {
     [classes[themeColor]]: themeColor,
     [classes[themeEngine]]: themeEngine
   });
-  console.log("loading", loading);
   return (
     <Button style={loading && { pointerEvents: "none", backgroundColor: "#ccc" }} className={className} {...other}>
       {children}
-      {loading && <SpinnerAdornment />}
+      {loading && !transaction && <SpinnerAdornment />}
     </Button>
   );
 };
 
-CuiLoadingButton.propTypes = {
+CuiTransactionButton.propTypes = {
   /**
    * The content of the button.
    */
@@ -79,9 +80,11 @@ CuiLoadingButton.propTypes = {
 
   block: PropTypes.bool,
 
+  transaction: PropTypes.bool,
+
   loading: PropTypes.bool
 };
 
-CuiLoadingButton.defaultProps = {};
+CuiTransactionButton.defaultProps = {};
 
-export default withStyles(styles)(CuiLoadingButton);
+export default withStyles(styles)(CuiTransactionButton);

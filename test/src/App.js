@@ -9,7 +9,11 @@ import {
   CuiPagination,
   CuiParallax,
   CuiMaterialBadge,
-  CuiLoadingButton
+  CuiLoadingButton,
+  CuiGrid,
+  CuiRow,
+  CuiCol,
+  CuiTransactionButton
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
@@ -18,6 +22,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* <CuiGrid>
+          <CuiRow>Hello</CuiRow>
+        </CuiGrid> */}
         <CuiPagination
           pages={[
             { text: 1 },
@@ -36,7 +43,7 @@ class App extends Component {
           buttonText="Components"
           dropdownList={[
             "hello",
-            <a href="https://creativetimofficial.github.io/material-kit-react/#/documentation" target="_blank">
+            <a href="https://creativetimofficial.github.io/material-kit-react/#/documentation" target="_blank" rel="noopener noreferrer">
               Documentation
             </a>
           ]}
@@ -46,9 +53,12 @@ class App extends Component {
         </CuiCard>
         <CuiMaterialBadge>Hi</CuiMaterialBadge>
         <CuiBadge>Hello</CuiBadge>
-        <CuiLoadingButton themeEngine="vault" color="vault" round>
+        <CuiLoadingButton loading themeEngine="vault" themeColor="vault" round>
           Hello
         </CuiLoadingButton>
+        <CuiTransactionButton transaction loading themeEngine="vault" themeColor="vault" round>
+          Transaction
+        </CuiTransactionButton>
         <CuiTables
           tableHeaderColor="primary"
           tableHead={["ID", "Name", "Country", "City", "Salary"]}
