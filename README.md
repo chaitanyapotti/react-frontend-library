@@ -1,12 +1,17 @@
 Supported front-end default designs
 
-- Material UI
+- Material UI (tim)
 - Semantic UI
 - Vault
 
-use MUIThemeProvider and pass a property
+Usage:
+
+themeEngine and themeColor are two main properties which define the look of the component
+Use them appropriately
 
 use npm run release to release a new build to npm
+
+Todo Components:
 
 Loading Button
 Transaction Button
@@ -28,4 +33,4 @@ Dropdown
 Steppers
 Tooltips
 ProgressBar
-Selection Control - Radio & Chceckbox
+Selection Control - Radio & Checkbox

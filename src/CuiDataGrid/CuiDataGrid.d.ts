@@ -1,9 +1,8 @@
 import * as React from "react";
 import { StandardProps, PropTypes } from "..";
+import { MUIDataTableProps } from "mui-datatables";
 
-export interface CuiDataGridProps extends StandardProps<CuiDataGridClassKey, "component"> {
-  themeEngine?: "material" | "semantic" | "vault" | "tim";
-}
+export interface CuiDataGridProps extends StandardProps<MUIDataTableProps, CuiDataGridClassKey, "component"> {}
 
 export type CuiDataGridClassKey = "material" | "semantic" | "vault" | "tim";
 

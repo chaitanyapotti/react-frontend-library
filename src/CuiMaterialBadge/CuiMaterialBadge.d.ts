@@ -1,7 +1,8 @@
 import * as React from "react";
 import { StandardProps, PropTypes } from "..";
+import { BadgeProps } from "@material-ui/core/Badge/index";
 
-export interface CuiBadgeProps extends StandardProps<React.HTMLAttributes<HTMLDivElement>, CuiBadgeClassKey> {
+export interface CuiBadgeProps extends StandardProps<BadgeProps, CuiBadgeClassKey, "component"> {
   themeEngine?: "semantic" | "vault" | "tim";
   themeColor?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
 }

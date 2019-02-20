@@ -1,11 +1,10 @@
 /* eslint camelcase: 0 */
 
-import React from "react";
+import React, { Component } from "react";
 import MUIDataTable from "mui-datatables";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-// import { withRouter } from "react-router-dom";
 
-class DataGrid extends React.Component {
+class DataGrid extends Component {
   getMuiTheme = () =>
     createMuiTheme({
       overrides: {

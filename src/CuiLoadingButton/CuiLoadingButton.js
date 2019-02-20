@@ -2,7 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import cx from "classnames";
 import { withStyles, Button, CircularProgress } from "@material-ui/core";
 import styles from "../styles/LoadingButton";
 
@@ -14,27 +14,25 @@ const CuiLoadingButton = props => {
     loading,
     disabled,
     simple,
-    size,
     block,
     link,
     justIcon,
-    color,
+    themeColor,
     round,
     classes,
     className: classNameProp,
     themeEngine,
     ...other
   } = props;
-  const className = classNames(classNameProp, [classes[`${themeEngine}button`]], {
-    [classes[size]]: size,
-    [classes[color]]: color,
+  const className = cx(classNameProp, {
     [classes.round]: round,
     [classes.disabled]: disabled,
     [classes.simple]: simple,
     [classes.block]: block,
     [classes.link]: link,
     [classes.justIcon]: justIcon,
-    [className]: className
+    [classes[themeColor]]: themeColor,
+    [classes[themeEngine]]: themeEngine
   });
   return (
     <Button className={className} {...other}>
@@ -60,16 +58,29 @@ CuiLoadingButton.propTypes = {
   className: PropTypes.string,
   /**
    * The theme engine of the component. It supports those theme engines that make sense for this component.
-   * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"]),
-  color: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
-  size: PropTypes.oneOf(["sm", "lg"])
+  themeEngine: PropTypes.oneOf(["semantic", "vault", "tim"]),
+  /**
+   * The color property gives you to flexibilty to add specific color to the component.
+   * Based on prop type we are inserting the color
+   */
+  themeColor: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+
+  round: PropTypes.bool,
+
+  disabled: PropTypes.bool,
+
+  simple: PropTypes.bool,
+
+  link: PropTypes.bool,
+
+  justIcon: PropTypes.bool,
+
+  block: PropTypes.bool,
+
+  loading: PropTypes.bool
 };
 
-CuiLoadingButton.defaultProps = {
-  themeEngine: "material",
-  loading: true
-};
+CuiLoadingButton.defaultProps = {};
 
 export default withStyles(styles)(CuiLoadingButton);
