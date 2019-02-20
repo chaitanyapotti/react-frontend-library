@@ -37,7 +37,7 @@ const CuiTransactionButton = props => {
     [classes[themeEngine]]: themeEngine
   });
   return (
-    <Button style={loading && { pointerEvents: "none", backgroundColor: "#ccc" }} className={className} {...other}>
+    <Button style={loading && { pointerEvents: "none" }} className={className} {...other}>
       {children}
       {loading && !transaction && <SpinnerAdornment />}
     </Button>

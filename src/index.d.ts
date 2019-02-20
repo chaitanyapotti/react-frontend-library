@@ -30,3 +30,4 @@ export { default as CuiGrid } from "./CuiGrid";
 export { default as CuiRow } from "./CuiRow";
 export { default as CuiCol } from "./CuiCol";
 export { default as CuiTransactionButton } from "./CuiTransactionButton";
+export { default as CuiMasonaryLayout } from "./CuiMasonaryLayout";
