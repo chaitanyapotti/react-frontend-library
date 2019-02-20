@@ -5,19 +5,18 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Button from "@material-ui/core/Button";
+import { withStyles, Button } from "@material-ui/core";
 
 import styles from "../styles/Pagination";
 
 function CuiPagination({ ...props }) {
-  const { classes, pages, color } = props;
+  const { classes, pages, themeColor } = props;
   return (
     <ul className={classes.pagination}>
       {pages.map((prop, key) => {
         const paginationLink = classNames({
           [classes.paginationLink]: true,
-          [classes[color]]: prop.active,
+          [classes[themeColor]]: prop.active,
           [classes.disabled]: prop.disabled
         });
         return (
@@ -39,7 +38,7 @@ function CuiPagination({ ...props }) {
 }
 
 CuiPagination.defaultProps = {
-  color: "primary"
+  themeColor: "primary"
 };
 
 CuiPagination.propTypes = {
@@ -52,7 +51,7 @@ CuiPagination.propTypes = {
       onClick: PropTypes.func
     })
   ).isRequired,
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"])
+  themeColor: PropTypes.oneOf(["primary", "info", "success", "warning", "danger", "rose", "white", "transparent"])
 };
 
 export default withStyles(styles)(CuiPagination);
