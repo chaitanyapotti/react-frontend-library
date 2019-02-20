@@ -1,26 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { withStyles } from "@material-ui/core";
+import { withStyles, Badge } from "@material-ui/core";
 
-import styles from "../styles/Badge";
+import styles from "../styles/MaterialBadge";
 
-const CuiBadge = props => {
-  const { classes, className: classNameProp, themeColor, themeEngine, children, ...other } = props;
-  const className = cx(classNameProp, classes.badge, {
+const CuiMaterialBadge = props => {
+  const { classes, children, className: classNameProp, themeColor, themeEngine, ...other } = props;
+  const className = cx(classNameProp, {
     [classes[themeColor]]: themeColor,
     [classes[themeEngine]]: themeEngine
   });
   return (
-    <span className={className} {...other}>
+    <Badge className={className} {...other}>
       {children}
-    </span>
+    </Badge>
   );
 };
 
-CuiBadge.defaultProps = {};
+CuiMaterialBadge.defaultProps = {};
 
-CuiBadge.propTypes = {
+CuiMaterialBadge.propTypes = {
   /**
    * The content of the button.
    */
@@ -31,18 +31,15 @@ CuiBadge.propTypes = {
    */
   classes: PropTypes.object.isRequired,
   /**
-   * @ignore
-   */
-  className: PropTypes.string,
-  /**
    * The theme engine of the component. It supports those theme engines that make sense for this component.
+   * Default theme is tim
    */
-  themeEngine: PropTypes.oneOf(["semantic", "vault", "tim"]),
+  themeEngine: PropTypes.oneOf(["semantic", "tim", "vault"]),
   /**
    * The color property gives you to flexibilty to add specific color to the component.
    * Based on prop type we are inserting the color
    */
-  themeColor: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"])
+  themeColor: PropTypes.oneOf(["primary", "warning", "danger", "success", "info", "rose", "gray"])
 };
 
-export default withStyles(styles)(CuiBadge);
+export default withStyles(styles)(CuiMaterialBadge);

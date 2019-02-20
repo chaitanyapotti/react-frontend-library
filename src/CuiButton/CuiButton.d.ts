@@ -8,6 +8,7 @@ export interface CuiButtonProps extends StandardProps<ButtonProps, CuiButtonClas
   simple?: boolean;
   round?: boolean;
   link?: boolean;
+  block?: boolean;
   justIcon?: boolean;
 }
 

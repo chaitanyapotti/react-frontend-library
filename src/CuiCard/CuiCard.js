@@ -1,17 +1,18 @@
-// https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js
-
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import cx from "classnames";
 import { withStyles, Card } from "@material-ui/core";
+
 import styles from "../styles/Card";
 
 const CuiCard = props => {
-  const { children, classes, plain, profile, chart, className: classNameProp, themeEngine, ...other } = props;
-  const className = classNames(classNameProp, [classes[`${themeEngine}Card`]], {
+  const { children, classes, plain, profile, chart, className: classNameProp, themeColor, themeEngine, ...other } = props;
+  const className = cx(classNameProp, {
     [classes.cardPlain]: plain,
     [classes.cardProfile]: profile,
-    [classes.cardChart]: chart
+    [classes.cardChart]: chart,
+    [classes[themeColor]]: themeColor,
+    [classes[themeEngine]]: themeEngine
   });
   return (
     <Card className={className} {...other}>
@@ -40,6 +41,12 @@ CuiCard.propTypes = {
    */
   themeEngine: PropTypes.oneOf(["semantic", "vault", "tim"]),
 
+  /**
+   * The color property gives you to flexibilty to add specific color to the component.
+   * Based on prop type we are inserting the color
+   */
+  themeColor: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+
   plain: PropTypes.bool,
 
   profile: PropTypes.bool,
@@ -47,8 +54,6 @@ CuiCard.propTypes = {
   chart: PropTypes.bool
 };
 
-CuiCard.defaultProps = {
-  themeEngine: "tim"
-};
+CuiCard.defaultProps = {};
 
 export default withStyles(styles)(CuiCard);

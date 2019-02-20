@@ -5,12 +5,11 @@ import {
   CuiDataGrid,
   CuiButton,
   CuiBadge,
-  CuiCardBody,
-  CuiCardHeader,
-  CuiCardFooter,
   CuiDropdown,
   CuiPagination,
-  CuiParallax
+  CuiParallax,
+  CuiMaterialBadge,
+  CuiLoadingButton
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
@@ -43,16 +42,13 @@ class App extends Component {
           ]}
         />
         <CuiCard>
-          <CuiCardHeader themeEngine="tim">Hello</CuiCardHeader>
-          <CuiCardBody themeEngine="tim">
-            <CuiBadge themeEngine="tim">Test</CuiBadge>
-          </CuiCardBody>
-          <CuiCardFooter themeEngine="tim">Footer</CuiCardFooter>
+          <CuiBadge themeEngine="tim">Test</CuiBadge>
         </CuiCard>
-        <CuiBadge themeEngine="tim">Hello</CuiBadge>
-        {/* <CuiLoadingButton themeEngine="vault" color="vault" round>
+        <CuiMaterialBadge>Hi</CuiMaterialBadge>
+        <CuiBadge>Hello</CuiBadge>
+        <CuiLoadingButton themeEngine="vault" color="vault" round>
           Hello
-        </CuiLoadingButton> */}
+        </CuiLoadingButton>
         <CuiTables
           tableHeaderColor="primary"
           tableHead={["ID", "Name", "Country", "City", "Salary"]}
@@ -78,7 +74,7 @@ class App extends Component {
               ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
             ]}
           />
-          <CuiButton themeEngine="semantic" size="large" justIcon>
+          <CuiButton themeEngine="tim" size="large" justIcon>
             <AddShoppingCartIcon />
           </CuiButton>
         </CuiCard>

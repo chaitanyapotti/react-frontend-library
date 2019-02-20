@@ -3,9 +3,14 @@ import { StandardProps, PropTypes } from "..";
 import { ButtonProps } from "@material-ui/core/Button/index";
 
 export interface CuiLoadingButtonProps extends StandardProps<ButtonProps, CuiLoadingButtonClassKey, "component"> {
-  themeEngine?: "material" | "semantic" | "vault";
-  color?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
-  size?: "sm" | "lg";
+  themeEngine?: "semantic" | "vault" | "tim";
+  themeColor?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
+  simple?: boolean;
+  round?: boolean;
+  link?: boolean;
+  block?: boolean;
+  justIcon?: boolean;
+  loading?: boolean;
 }
 
 export type CuiLoadingButtonClassKey = "material" | "semantic" | "vault";
