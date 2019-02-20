@@ -8,3 +8,6 @@ export { default as CuiBadge } from "./CuiBadge";
 export { default as CuiCardBody } from "./CuiCardBody";
 export { default as CuiCardHeader } from "./CuiCardHeader";
 export { default as CuiCardFooter } from "./CuiCardFooter";
+export { default as CuiDropdown } from "./CuiDropdown";
+export { default as CuiPagination } from "./CuiPagination";
+export { default as CuiSnackbar } from "./CuiSnackbar";

@@ -1,5 +1,16 @@
 import React, { Component } from "react";
-import { CuiCard, CuiTables, CuiDataGrid, CuiButton, CuiBadge, CuiCardBody, CuiCardHeader, CuiCardFooter } from "react-frontend-library";
+import {
+  CuiCard,
+  CuiTables,
+  CuiDataGrid,
+  CuiButton,
+  CuiBadge,
+  CuiCardBody,
+  CuiCardHeader,
+  CuiCardFooter,
+  CuiDropdown,
+  CuiPagination
+} from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
 
@@ -7,6 +18,29 @@ class App extends Component {
   render() {
     return (
       <div>
+        <CuiPagination
+          pages={[
+            { text: 1 },
+            { text: "..." },
+            { text: 5 },
+            { text: 6 },
+            { active: true, text: 7 },
+            { text: 8 },
+            { text: 9 },
+            { text: "..." },
+            { text: 12 }
+          ]}
+        />
+        <CuiDropdown
+          noLiPadding
+          buttonText="Components"
+          dropdownList={[
+            "hello",
+            <a href="https://creativetimofficial.github.io/material-kit-react/#/documentation" target="_blank">
+              Documentation
+            </a>
+          ]}
+        />
         <CuiCard>
           <CuiCardHeader themeEngine="tim">Hello</CuiCardHeader>
           <CuiCardBody themeEngine="tim">
