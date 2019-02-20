@@ -9,7 +9,8 @@ import {
   CuiCardHeader,
   CuiCardFooter,
   CuiDropdown,
-  CuiPagination
+  CuiPagination,
+  CuiParallax
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
@@ -64,6 +65,7 @@ class App extends Component {
             ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
           ]}
         />
+        <CuiParallax image={"https://www.adorama.com/alc/wp-content/uploads/2018/11/shutterstock_100419445-825x465.jpg"} />
         <CuiCard chart>
           <CuiDataGrid
             columns={["ID", "Name", "Country", "City", "Salary"]}
