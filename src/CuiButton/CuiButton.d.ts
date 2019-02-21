@@ -3,10 +3,34 @@ import { StandardProps, PropTypes } from "..";
 import { ButtonProps } from "@material-ui/core/Button/index";
 
 export interface CuiButtonProps extends StandardProps<ButtonProps, CuiButtonClassKey, "component"> {
-  themeEngine?: "material" | "semantic" | "vault";
+  themeEngine?: "semantic" | "vault" | "tim";
+  themeColor?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
+  simple?: boolean;
+  round?: boolean;
+  link?: boolean;
+  block?: boolean;
+  justIcon?: boolean;
 }
 
-export type CuiButtonClassKey = "material" | "semantic" | "vault";
+export type CuiButtonClassKey =
+  | "white"
+  | "vault"
+  | "rose"
+  | "primary"
+  | "info"
+  | "success"
+  | "warning"
+  | "danger"
+  | "simple"
+  | "transparent"
+  | "disabled"
+  | "lg"
+  | "sm"
+  | "round"
+  | "link"
+  | "semanticbutton"
+  | "timbutton"
+  | "vaultbutton";
 
 declare const CuiButton: React.ComponentType<CuiButtonProps>;
 

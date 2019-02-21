@@ -4,70 +4,77 @@
   "description": "Custom front-end component library",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rmdir /s /q build",
     "build:es2015": "cross-env NODE_ENV=production && babel --config-file ./.babel.config.js ./src --out-dir ./build --ignore *.test.js",
     "build:es2015modules": "cross-env NODE_ENV=production BABEL_ENV=modules babel --config-file ./.babel.config.js ./src/index.js --out-file ./build/index.es.js",
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./.babel.config.js ./src --out-dir ./build/es --ignore *.test.js",
     "build:copy-files": "babel-node --config-file ./.babel.config.js ./scripts/copy-files.js",
-    "build": "yarn build:es2015 && yarn build:es2015modules && yarn build:es && yarn build:copy-files",
+    "build:copy-for-test": "babel-node --config-file ./.babel.config.js ./scripts/copy-for-test.js",
+    "build": "yarn build:es2015 && yarn build:es2015modules && yarn build:es && yarn build:copy-files && yarn build:copy-for-test",
     "release": "yarn build && npm publish build"
   },
   "dependencies": {
-    "@babel/runtime": "^7.2.0",
-    "@material-ui/core": "^3.9.0",
+    "@babel/runtime": "^7.3.1",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
     "@material-ui/utils": "^3.0.0-alpha.3",
     "classnames": "^2.2.6",
-    "prop-types": "^15.6.2"
+    "mui-datatables": "^2.0.0-beta-54",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-flexbox-grid": "^2.1.2"
   },
   "module": "./index.es.js",
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   },
   "sideEffects": false,
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.3",
     "@babel/node": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.6.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-config-react-app": "^3.0.6",
-    "eslint-plugin-flowtype": "^3.2.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-mocha": "^5.2.1",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.16.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-istanbul": "^5.1.0",
-    "babel-plugin-module-resolver": "^3.1.2",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-istanbul": "^5.1.1",
+    "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-preval": "^3.0.1",
-    "babel-plugin-react-remove-properties": "^0.2.5",
+    "babel-plugin-react-remove-properties": "^0.3.0",
     "babel-plugin-transform-dev-warning": "^0.1.1",
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "cross-env": "^5.2.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react-app": "^3.0.7",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
     "fs-extra": "^7.0.1",
     "glob": "^7.1.3",
-    "glob-gitignore": "^1.0.11"
+    "glob-gitignore": "^1.0.11",
+    "prettier": "^1.16.4",
+    "ncp": "^2.0.0"
   },
   "engines": {
     "node": "10.x"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chaitanyapotti/react-frontend_library.git"
+    "url": "git+https://github.com/chaitanyapotti/react-frontend-library.git"
   },
   "keywords": [
     "material-ui",
@@ -78,7 +85,7 @@
   "author": "Chaitanya Potti, Ayush Gupta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chaitanyapotti/react-frontend_library/issues"
+    "url": "https://github.com/chaitanyapotti/react-frontend-library/issues"
   },
-  "homepage": "https://github.com/chaitanyapotti/react-frontend_library#readme"
+  "homepage": "https://github.com/chaitanyapotti/react-frontend-library#readme"
 }

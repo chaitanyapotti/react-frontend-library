@@ -2,31 +2,23 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import cx from "classnames";
 import { withStyles, Button } from "@material-ui/core";
-
-export const customStyles = {
-  material: {
-    color: "#6d6d6d"
-  },
-  semantic: {
-    color: "#4dac3f"
-  },
-  vault: {
-    color: "#3d3d3d"
-  }
-};
+import styles from "../styles/Button";
 
 const CuiButton = props => {
-  const { children, classes, className: classNameProp, themeEngine, ...other } = props;
-  const className = classNames(
-    {
-      [classes.semantic]: themeEngine === "semantic",
-      [classes.vault]: themeEngine === "vault",
-      [classes.material]: themeEngine === "material"
-    },
-    classNameProp
-  );
+  const { themeColor, round, children, disabled, simple, link, justIcon, block, classes, className: classNameProp, themeEngine, ...other } = props;
+
+  const className = cx(classNameProp, {
+    [classes.round]: round,
+    [classes.disabled]: disabled,
+    [classes.simple]: simple,
+    [classes.link]: link,
+    [classes.justIcon]: justIcon,
+    [classes.block]: block,
+    [classes[themeColor]]: themeColor,
+    [classes[themeEngine]]: themeEngine
+  });
   return (
     <Button className={className} {...other}>
       {children}
@@ -50,13 +42,27 @@ CuiButton.propTypes = {
   className: PropTypes.string,
   /**
    * The theme engine of the component. It supports those theme engines that make sense for this component.
-   * Default theme is material
    */
-  themeEngine: PropTypes.oneOf(["material", "semantic", "vault"])
+  themeEngine: PropTypes.oneOf(["semantic", "vault", "tim"]),
+  /**
+   * The color property gives you to flexibilty to add specific color to the component.
+   * Based on prop type we are inserting the color
+   */
+  themeColor: PropTypes.oneOf(["primary", "vault", "info", "success", "warning", "danger", "rose", "white", "transparent"]),
+
+  round: PropTypes.bool,
+
+  disabled: PropTypes.bool,
+
+  simple: PropTypes.bool,
+
+  link: PropTypes.bool,
+
+  justIcon: PropTypes.bool,
+
+  block: PropTypes.bool
 };
 
-CuiButton.defaultProps = {
-  themeEngine: "material"
-};
+CuiButton.defaultProps = {};
 
-export default withStyles(customStyles)(CuiButton);
+export default withStyles(styles)(CuiButton);
