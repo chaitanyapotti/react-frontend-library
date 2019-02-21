@@ -4,28 +4,29 @@ import PropTypes from "prop-types";
 const CuiMasonaryLayout = props => {
   const columnWrapper = {};
   const result = [];
+  const { columns, children, gap } = props;
 
   // create columns
-  for (let i = 0; i < props.columns; i += 1) {
+  for (let i = 0; i < columns; i += 1) {
     columnWrapper[`column${i}`] = [];
   }
 
   // divide children into columns
-  for (let i = 0; i < props.children.length; i += 1) {
-    const columnIndex = i % props.columns;
+  for (let i = 0; i < children.length; i += 1) {
+    const columnIndex = i % columns;
     columnWrapper[`column${columnIndex}`].push(
-      <div style={{ marginBottom: `${props.gap}px` }} key={i}>
-        {props.children[i]}
+      <div style={{ marginBottom: `${gap}px` }} key={i}>
+        {children[i]}
       </div>
     );
   }
 
   // wrap children in each column with a div
-  for (let i = 0; i < props.columns; i += 1) {
+  for (let i = 0; i < columns; i += 1) {
     result.push(
       <div
         style={{
-          marginLeft: `${i > 0 ? props.gap : 0}px`,
+          marginLeft: `${i > 0 ? gap : 0}px`,
           flex: 1
         }}
         key={i}>

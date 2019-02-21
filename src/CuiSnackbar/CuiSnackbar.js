@@ -2,10 +2,7 @@ import React from "react";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Snack from "@material-ui/core/SnackbarContent";
-import IconButton from "@material-ui/core/IconButton";
-import Icon from "@material-ui/core/Icon";
+import { withStyles, Snackbar, IconButton, Icon } from "@material-ui/core";
 // @material-ui/icons
 import Close from "@material-ui/icons/Close";
 
@@ -14,7 +11,6 @@ import styles from "../styles/Snackbar";
 class CuiSnackbar extends React.Component {
   constructor(props) {
     super(props);
-    this.closeAlert = this.closeAlert.bind(this);
     const { classes, message, color, close, icon } = props;
     var action = [];
     if (close !== undefined) {
@@ -40,7 +36,7 @@ class CuiSnackbar extends React.Component {
 
     this.state = {
       alert: (
-        <Snack
+        <Snackbar
           message={
             <div>
               {snackIcon}
@@ -56,9 +52,10 @@ class CuiSnackbar extends React.Component {
       )
     };
   }
-  closeAlert() {
+  closeAlert = () => {
     this.setState({ alert: null });
-  }
+  };
+
   render() {
     return this.state.alert;
   }
@@ -67,7 +64,7 @@ class CuiSnackbar extends React.Component {
 CuiSnackbar.propTypes = {
   classes: PropTypes.object.isRequired,
   message: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(["info", "success", "warning", "danger", "primary"]),
+  color: PropTypes.oneOf(["info", "success", "warning", "danger", "primary", "rose", "white", "transparent"]),
   close: PropTypes.bool,
   icon: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
 };

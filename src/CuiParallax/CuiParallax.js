@@ -4,7 +4,7 @@ import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core";
 
 // core components
 import styles from "../styles/Parallax";
@@ -40,7 +40,7 @@ class CuiParallax extends React.Component {
       [classes.parallax]: true,
       [classes.filter]: filter,
       [classes.small]: small,
-      [className]: className !== undefined
+      [className]: className
     });
     return (
       <div

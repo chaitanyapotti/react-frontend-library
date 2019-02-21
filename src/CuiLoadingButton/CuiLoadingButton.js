@@ -34,7 +34,6 @@ const CuiLoadingButton = props => {
     [classes[themeColor]]: themeColor,
     [classes[themeEngine]]: themeEngine
   });
-  console.log("loading", loading);
   return (
     <Button style={loading && { pointerEvents: "none" }} className={className} {...other}>
       {children}
