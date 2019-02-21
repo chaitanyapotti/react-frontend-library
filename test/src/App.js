@@ -13,18 +13,85 @@ import {
   CuiGrid,
   CuiRow,
   CuiCol,
-  CuiTransactionButton
+  CuiTransactionButton,
+  CuiTooltip,
+  CuiUploadButton,
+  CuiInput,
+  CuiTabs,
+  CuiChips,
+  CuiProgressBar,
+  CuiAvatar
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
+
+import Face from "@material-ui/icons/Face";
+import Chat from "@material-ui/icons/Chat";
+import Build from "@material-ui/icons/Build";
 
 class App extends Component {
   render() {
     return (
       <div>
+        <CuiAvatar themeEngine="tim">AG</CuiAvatar>
+        <CuiProgressBar variant="determinate" color="primary" value={30} />
+        <CuiChips label="aayush" />
+        <CuiTabs
+          plainTabs
+          headerColor="primary"
+          tabs={[
+            {
+              tabName: "Profile",
+              tabIcon: Face,
+              tabContent: (
+                <p>
+                  I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So
+                  when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the
+                  leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                </p>
+              )
+            },
+            {
+              tabName: "Messages",
+              tabIcon: Chat,
+              tabContent: (
+                <p>
+                  I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I
+                  will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am
+                  the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could
+                  be at.
+                </p>
+              )
+            },
+            {
+              tabName: "Settings",
+              tabIcon: Build,
+              tabContent: (
+                <p>
+                  think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when
+                  you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader
+                  of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                </p>
+              )
+            }
+          ]}
+        />
         {/* <CuiGrid>
           <CuiRow>Hello</CuiRow>
         </CuiGrid> */}
+        <CuiTooltip id="tooltip-top" title="Tooltip on top" placement="bottom">
+          <CuiButton themeEngine="tim" size="large" themeColor="primary">
+            Hello
+          </CuiButton>
+        </CuiTooltip>
+        <CuiUploadButton>Upload</CuiUploadButton>
+        <CuiInput
+          labelText="With floating label"
+          id="float"
+          formControlProps={{
+            fullWidth: true
+          }}
+        />
         <CuiPagination
           pages={[
             { text: 1 },
