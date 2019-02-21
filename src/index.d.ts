@@ -31,3 +31,7 @@ export { default as CuiRow } from "./CuiRow";
 export { default as CuiCol } from "./CuiCol";
 export { default as CuiTransactionButton } from "./CuiTransactionButton";
 export { default as CuiMasonaryLayout } from "./CuiMasonaryLayout";
+export { default as CuiInput } from "./CuiInput";
+export { default as CuiUploadButton } from "./CuiUploadButton";
+export { default as CuiTooltip } from "./CuiTooltip";
+export { default as CuiTabs } from "./CuiTabs";

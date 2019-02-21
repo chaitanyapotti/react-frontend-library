@@ -54,11 +54,11 @@ Selection Control - Radio & Checkbox
 | CuiSnackbar          | Migrated |                |
 | CuiTables            | Migrated |                |
 | CuiTransactionButton | Migrated |                |
-| CuiUploadButton      | Pending  |                |
-| CuiTooltip           | Pending  |                |
+| CuiUploadButton      | Migrated |                |
+| CuiTooltip           | Migrated |                |
 | CuiModal             | Pending  |                |
 | CuiTabs              | Pending  |                |
-| CuiInput             | Pending  |                |
+| CuiInput             | Migrated |                |
 | CuiHeader            | Pending  |                |
 | CuiSteppers          | Pending  |                |
 | CuiProgressBar       | Pending  |                |
