@@ -18,3 +18,6 @@ export { default as CuiInput } from "./CuiInput";
 export { default as CuiUploadButton } from "./CuiUploadButton";
 export { default as CuiTooltip } from "./CuiTooltip";
 export { default as CuiTabs } from "./CuiTabs";
+export { default as CuiProgressBar } from "./CuiProgressBar";
+export { default as CuiChips } from "./CuiChips";
+export { default as CuiAvatar } from "./CuiAvatar";

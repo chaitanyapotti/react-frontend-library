@@ -17,7 +17,10 @@ import {
   CuiTooltip,
   CuiUploadButton,
   CuiInput,
-  CuiTabs
+  CuiTabs,
+  CuiChips,
+  CuiProgressBar,
+  CuiAvatar
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
@@ -30,6 +33,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <CuiAvatar themeEngine="tim">AG</CuiAvatar>
+        <CuiProgressBar variant="determinate" color="primary" value={30} />
+        <CuiChips label="aayush" />
         <CuiTabs
           plainTabs
           headerColor="primary"
