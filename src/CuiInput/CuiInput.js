@@ -4,14 +4,11 @@ import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Input from "@material-ui/core/Input";
+import { withStyles, FormControl, InputLabel, Input } from "@material-ui/core/styles/withStyles";
 
 import styles from "../styles/Input";
 
-function CuiInput({ ...props }) {
+const CuiInput = ({ ...props }) => {
   const { classes, formControlProps, labelText, id, labelProps, inputProps, error, white, inputRootCustomClasses, success } = props;
 
   const labelClasses = classNames({
@@ -56,7 +53,7 @@ function CuiInput({ ...props }) {
       />
     </FormControl>
   );
-}
+};
 
 CuiInput.propTypes = {
   classes: PropTypes.object.isRequired,

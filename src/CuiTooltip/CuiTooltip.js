@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { withStyles } from "@material-ui/core";
-import Tooltip from "@material-ui/core/Tooltip";
+import { withStyles, Tooltip } from "@material-ui/core";
 
-import styles from "../styles/Badge";
+import styles from "../styles/Tooltip";
 
 const CuiTooltip = props => {
   const { classes, className: classNameProp, themeColor, themeEngine, children, ...other } = props;
-  const className = cx(classNameProp, classes.badge, {
+  const className = cx(classNameProp, classes.tooltip, {
     [classes[themeColor]]: themeColor,
     [classes[themeEngine]]: themeEngine
   });

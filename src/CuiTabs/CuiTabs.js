@@ -1,22 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 
 // material-ui components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Icon from "@material-ui/core/Icon";
+import { withStyles, Tabs, Tab, Icon, CardHeader, CardContent } from "@material-ui/core/styles/withStyles";
 // core components
 import Card from "../CuiCard/CuiCard";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardContent from "@material-ui/core/CardContent";
 
 import styles from "../styles/Tabs";
 
-class CuiTabs extends React.Component {
+class CuiTabs extends Component {
   state = {
     value: 0
   };
@@ -31,7 +26,6 @@ class CuiTabs extends React.Component {
       [classes.cardTitle]: true,
       [classes.cardTitleRTL]: rtlActive
     });
-    console.log("sjall", tabs);
     return (
       <Card>
         <div>
