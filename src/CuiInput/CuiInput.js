@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import { withStyles, FormControl, InputLabel, Input } from "@material-ui/core/styles/withStyles";
+import { withStyles, FormControl, InputLabel, Input } from "@material-ui/core";
 
 import styles from "../styles/Input";
 

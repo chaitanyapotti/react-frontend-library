@@ -5,7 +5,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 // material-ui components
-import { withStyles, Tabs, Tab, Icon, CardHeader, CardContent } from "@material-ui/core/styles/withStyles";
+import { withStyles, Tabs, Tab, Icon, CardHeader, CardContent } from "@material-ui/core";
 // core components
 import Card from "../CuiCard/CuiCard";
 
