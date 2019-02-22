@@ -24,3 +24,4 @@ export { default as CuiAvatar } from "./CuiAvatar";
 export { default as CuiExpansionPanel } from "./CuiExpansionPanel";
 export { default as CuiDivider } from "./CuiDivider";
 export { default as CuiModal } from "./CuiModal";
+export { default as CuiStepper } from "./CuiStepper";

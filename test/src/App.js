@@ -20,7 +20,11 @@ import {
   CuiTabs,
   CuiChips,
   CuiProgressBar,
-  CuiAvatar
+  CuiAvatar,
+  CuiExpansionPanel,
+  CuiDivider,
+  CuiModal,
+  CuiStepper
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
@@ -30,12 +34,50 @@ import Chat from "@material-ui/icons/Chat";
 import Build from "@material-ui/icons/Build";
 
 class App extends Component {
+  state = {
+    open: false,
+    activeStep: 1
+  };
+  getSteps = () => {
+    return ["Select campaign settings", "Create an ad group", "Create an ad"];
+  };
+
+  getStepContent = step => {
+    switch (step) {
+      case 0:
+        return "Select campaign settings...";
+      case 1:
+        return "What is an ad group anyways?";
+      case 2:
+        return "This is the bit I really care about!";
+      default:
+        return "Unknown step";
+    }
+  };
+  handleModalOpen = () => this.setState({ open: true });
+
+  handleClose = () => this.setState({ open: false });
   render() {
     return (
       <div>
+        <CuiStepper getStepContent={this.getStepContent} getSteps={this.getSteps} activeStep={this.state.activeStep} />
+        <CuiExpansionPanel header="Terms & Conditions" details="loremsekjs skasjas hsjdhsdjsdsd" />
         <CuiAvatar themeEngine="tim">AG</CuiAvatar>
         <CuiProgressBar variant="determinate" color="primary" value={30} />
         <CuiChips label="aayush" />
+        <CuiDivider />
+        <CuiButton onClick={this.handleModalOpen}>OPEN MODAL</CuiButton>
+        <CuiModal open={this.state.open} handleClose={this.handleClose} btn1="Close" btn2="Ok" btnColor="primary" title="Sign Up">
+          <div>
+            <CuiInput
+              labelText="With floating label"
+              id="float"
+              formControlProps={{
+                fullWidth: true
+              }}
+            />
+          </div>
+        </CuiModal>
         <CuiTabs
           plainTabs
           headerColor="primary"

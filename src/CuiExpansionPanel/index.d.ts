@@ -1,2 +1,2 @@
-export { default } from "./CuiExpansionPanels";
-export * from "./CuiExpansionPanels";
+export { default } from "./CuiExpansionPanel";
+export * from "./CuiExpansionPanel";

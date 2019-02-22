@@ -1,1 +1,1 @@
-export { default } from "./CuiExpansionPanels";
+export { default } from "./CuiExpansionPanel";
