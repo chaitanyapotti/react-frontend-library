@@ -60,7 +60,7 @@ Selection Control - Radio & Checkbox
 | CuiTabs              | Migrated |                |
 | CuiInput             | Migrated |                |
 | CuiHeader            | Pending  |                |
-| CuiSteppers          | Pending  |                |
+| CuiSteppers          | Migrated |                |
 | CuiProgressBar       | Migrated |                |
 | CuiSelectionButton   | Pending  |                |
 | CuiPickers           | Pending  |                |
