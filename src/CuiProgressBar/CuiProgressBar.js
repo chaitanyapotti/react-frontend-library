@@ -3,12 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import LinearProgress from "@material-ui/core/LinearProgress";
+import { withStyles, LinearProgress } from "@material-ui/core";
 // core components
 import styles from "../styles/ProgressBar";
 
-function CuiProgressBar({ ...props }) {
+const CuiProgressBar = ({ ...props }) => {
   const { classes, color, ...rest } = props;
   return (
     <LinearProgress
@@ -19,11 +18,9 @@ function CuiProgressBar({ ...props }) {
       }}
     />
   );
-}
-
-CuiProgressBar.defaultProps = {
-  color: "gray"
 };
+
+CuiProgressBar.defaultProps = {};
 
 CuiProgressBar.propTypes = {
   classes: PropTypes.object.isRequired,

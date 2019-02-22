@@ -1,10 +1,12 @@
 import * as React from "react";
 import { StandardProps, PropTypes } from "..";
-import { ButtonProps } from "@material-ui/core/Button/index";
 
-export interface CuiTabsProps extends StandardProps<ButtonProps, CuiTabsClassKey, "component"> {
-  themeEngine?: "semantic" | "vault" | "tim";
-  themeColor?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
+export interface CuiTabsProps extends StandardProps<CuiTabsClassKey, "component"> {
+  headerColor: "warning" | "success" | "danger" | "info" | "primary" | "rose";
+  title: string;
+  tabs: Array;
+  rtlActive: boolean;
+  plainTabs: boolean;
 }
 
 export type CuiTabsClassKey = "tabRootButton" | "tabSelected";

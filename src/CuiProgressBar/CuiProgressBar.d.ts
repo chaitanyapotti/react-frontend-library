@@ -1,9 +1,9 @@
 import * as React from "react";
 import { StandardProps, PropTypes } from "..";
+import { LinearProgressProps } from "@material-ui/core/LinearProgress/index";
 
-export interface CuiProgressBarProps extends StandardProps<React.HTMLAttributes<HTMLDivElement>, CuiProgressBarClassKey> {
-  themeEngine?: "semantic" | "vault" | "tim";
-  themeColor?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
+export interface CuiProgressBarProps extends StandardProps<LinearProgressProps, CuiProgressBarClassKey, "component"> {
+  color?: "primary" | "vault" | "info" | "success" | "warning" | "danger" | "rose" | "white" | "transparent";
 }
 
 export type CuiProgressBarClassKey = "root" | "bar";
