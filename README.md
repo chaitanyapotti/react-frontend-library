@@ -56,7 +56,7 @@ Selection Control - Radio & Checkbox
 | CuiTransactionButton | Migrated |                |
 | CuiUploadButton      | Migrated |                |
 | CuiTooltip           | Migrated |                |
-| CuiModal             | Pending  |                |
+| CuiModal             | Migrated |                |
 | CuiTabs              | Migrated |                |
 | CuiInput             | Migrated |                |
 | CuiHeader            | Pending  |                |
@@ -65,8 +65,8 @@ Selection Control - Radio & Checkbox
 | CuiSelectionButton   | Pending  |                |
 | CuiPickers           | Pending  |                |
 | CuiSelect            | Pending  |                |
-| CuiExpansionPanels   | Pending  |                |
+| CuiExpansionPanels   | Migrated |                |
 | CuiDrawer            | Pending  |                |
-| CuiDivider           | Pending  |                |
+| CuiDivider           | Migrated |                |
 | CuiChips             | Migrated |                |
 | CuiAvatar            | Migrated |                |

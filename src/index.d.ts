@@ -38,3 +38,6 @@ export { default as CuiTabs } from "./CuiTabs";
 export { default as CuiProgressBar } from "./CuiProgressBar";
 export { default as CuiChips } from "./CuiChips";
 export { default as CuiAvatar } from "./CuiAvatar";
+export { default as CuiExpansionPanel } from "./CuiExpansionPanel";
+export { default as CuiDivider } from "./CuiDivider";
+export { default as CuiModal } from "./CuiModal";
