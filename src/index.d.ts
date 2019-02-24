@@ -42,3 +42,6 @@ export { default as CuiExpansionPanel } from "./CuiExpansionPanel";
 export { default as CuiDivider } from "./CuiDivider";
 export { default as CuiModal } from "./CuiModal";
 export { default as CuiStepper } from "./CuiStepper";
+export { default as CuiRadioButton } from "./CuiRadioButton";
+export { default as CuiCheckbox } from "./CuiCheckbox";
+export { default as CuiHeader } from "./CuiHeader";

@@ -24,7 +24,10 @@ import {
   CuiExpansionPanel,
   CuiDivider,
   CuiModal,
-  CuiStepper
+  CuiStepper,
+  CuiRadioButton,
+  CuiCheckbox,
+  CuiHeader
 } from "react-frontend-library";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import "./App.css";
@@ -60,6 +63,13 @@ class App extends Component {
   render() {
     return (
       <div>
+        <CuiHeader brand="Material Kit React" fixed color="primary" changeColorOnScroll={{ height: 400, color: "white" }} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <CuiRadioButton />
+        <CuiCheckbox />
         <CuiStepper getStepContent={this.getStepContent} getSteps={this.getSteps} activeStep={this.state.activeStep} />
         <CuiExpansionPanel header="Terms & Conditions" details="loremsekjs skasjas hsjdhsdjsdsd" />
         <CuiAvatar themeEngine="tim">AG</CuiAvatar>
